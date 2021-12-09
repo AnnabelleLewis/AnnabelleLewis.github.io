@@ -1,16 +1,34 @@
 article {
 	padding-top: 50px;
+	padding-bottom: 25px;
 }
 img {
-	width: 500px;
+	width: 50%;
 	border-radius: 50px;
-	float: left;
+	
 	margin-right: 10px;
+}
+
+body {
+	background-color: #CDCDCD;
+}
+p {
+	color: #0C0B1E;
 }
 .important {
 	font-weight: bolder;
 	font-size: 50px;
 }
+
+.content_wrapper {
+	margin-right: auto; /* 1 */
+	margin-left: auto; /* 1 */
+	max-width:80%; /* 2 */
+	padding-right: 20px; /* 3 */
+	padding-left: 20px; /* 3 */
+	background-color: #eee;
+}
+
 #navbar {
   background-color: #333; /* Black background color */
   position: fixed; /* Make it stick/fixed */
