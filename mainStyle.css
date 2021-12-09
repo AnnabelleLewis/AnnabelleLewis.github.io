@@ -10,14 +10,19 @@ img {
 }
 
 body {
-	background-color: #CDCDCD;
+	background-image: url('pandy.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 p {
 	color: #0C0B1E;
+	font-size: 14pt;
+	font-family: Helvetica, sans-serif;
 }
 .important {
-	font-weight: bolder;
-	font-size: 50px;
+	font-weight: bold;
+	font-size: 40px;
 }
 
 .content_wrapper {
@@ -46,6 +51,7 @@ p {
   padding: 15px;
   text-decoration: none;
   font-size: 30px;
+  font-family: Helvetica, sans-serif;
 }
 
 #navbar a:hover {
