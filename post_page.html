@@ -17,12 +17,15 @@
 		<script>
             let params = new URL(window.location.toLocaleString()).searchParams;
             let article = params.get("article");
-            console.log("Testing article content getting.");
-            console.log(window.location.href);
-            console.log(params.has("article"));
-            console.log(params)
             let article_content = document.getElementById("article_content");
-            article_content.innerHTML = article
+            let article_json = {}
+            fetch("articles/" + article + ".json")
+                .then((response) => response.json())
+                .then(json => console.log(json));
+
+            function implement_json(json){
+                article_content.innerHTML = json.content
+            }
         </script>
 	</div>
 </body>
