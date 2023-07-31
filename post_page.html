@@ -21,7 +21,7 @@
             let article_json = {}
             fetch("articles/" + article + ".json")
                 .then((response) => response.json())
-                .then(json => console.log(json));
+                .then(implement_json);
 
             function implement_json(json){
                 article_content.innerHTML = json.content
