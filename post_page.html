@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creamsicle's Site</title>
+	<link rel="stylesheet" type="text/css" href="mainStyle.css">
+</head>
+<body>
+	<div class="title_bar">
+		<a href="https://creamsicle-art.tumblr.com/">My Tumblr</a>
+		<a href="https://creamsicle42.itch.io/">My Itch</a>
+		<a href="https://angeldown.thecomicseries.com/">My Comic</a>
+	</div>
+	<div class="centered_content">
+        <div id="article_content">if you see this it was fucked up</div>
+		<script>
+            let params = new URLSearchParams(window.location.href);
+            let article = params.get("article");
+            console.log("Testing article content getting.");
+            console.log(window.location.href);
+            console.log(params.has("article"));
+            console.log(params)
+            let article_content = document.getElementById("article_content");
+            article_content.innerHTML = article
+        </script>
+	</div>
+</body>
+</html>
