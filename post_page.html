@@ -15,7 +15,7 @@
 	<div class="centered_content">
         <div id="article_content">if you see this it was fucked up</div>
 		<script>
-            let params = new URLSearchParams(window.location.href);
+            let params = new URL(window.location.toLocaleString()).searchParams;
             let article = params.get("article");
             console.log("Testing article content getting.");
             console.log(window.location.href);
