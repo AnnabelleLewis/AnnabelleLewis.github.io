@@ -15,17 +15,9 @@
 		    <a href="https://angeldown.thecomicseries.com/">My Comic</a>
         </div>
 	</header>
-	<div class="centered_content">
-        <div id="article_content">if you see this it was fucked up</div>
-		<script>
-            let params = new URL(window.location.toLocaleString()).searchParams;
-            let article = params.get("article");
-            let article_content = document.getElementById("article_content");
-            let article_json = {}
-            fetch("articles/" + article + ".html")
-                .then((response) => response.text())
-                .then((text) => article_content.innerHTML = text);
-        </script>
+	<div class="post_preview">
+        <a href="post_page.html?article=test_article"><h1>Test Article</h1></a>
+        <p>Lorem Ipsum</p>
 	</div>
 </body>
 </html>
