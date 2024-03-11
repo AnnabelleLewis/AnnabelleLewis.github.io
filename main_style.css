@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0%;
+}
+
+ul {
+    background-color: rgb(40, 38, 40);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    background-color: rgb(40, 38, 40);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(40, 38, 40);
+  }
+
+div.hero_section {
+    background-image: url(forest_bkgd.jpg);
+    background-size: cover;
+    background-clip: border-box;
+    position: relative;
+    padding: 50px;
+    margin-left: 0px;
+}
+
+h1.hero_section {
+    font-size: 48pt;
+    text-shadow: 2px 2px 5px rgb(15, 10, 15);
+}
+
+p.hero_section {
+    font-size: 32pt;
+    text-shadow: 2px 2px 5px rgb(15, 10, 15);
+}
+
+
+h1 {
+    color: rgb(250, 250, 250);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: rgb(250, 250, 250);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post_preview {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    background-color: rgb(40, 38, 40);
+    border-radius: 10px;
+}
+
+.post_preview p {
+    margin: 5px;
+    padding-top: 2px;
+    padding-left: 20px;
+}
+
+.post_preview h1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+
+.post_preview a {
+    text-decoration: none;
+}
+
+.article_content {
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.article_content p {
+    color: rgb(250, 250, 250);
+    font-family: Arial, Helvetica, sans-serif;
+}
