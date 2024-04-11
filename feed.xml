@@ -6,6 +6,11 @@
     <link>https://creamsicle42.github.io/</link>
     <description>Creamsicle's personal blog for talking about projects, media, and art.</description>
     <item>
+        <title>This Article Was (Re-)Written In Rust</title>
+        <link>https://creamsicle42.github.io/articles/ThisArticleWasRewrittenInRust.html</link>
+        <description>In which I talk about my beginner experience with Rust.</description>
+    </item>
+    <item>
         <title>Gravity Acolyte Postmortem</title>
         <link>https://creamsicle42.github.io/articles/GravityAcolytePostmortem.html</link>
         <description>A post-mortem discussion of my jam game Gravity Acolyte.</description>
