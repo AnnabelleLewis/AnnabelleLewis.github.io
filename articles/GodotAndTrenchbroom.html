@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creamsicle's Site</title>
+        <link rel="stylesheet" type="text/css" href="../main_style.css">
+    </head>
+<body>
+	<ul>
+        <li class="header_button"><a href="../index.html" >Home</a></li>
+        <li class="header_button"><a href="../posts.html" >Posts</a></li>
+        <li class="header_button"><a href="https://creamsicle-art.tumblr.com/">My Tumblr</a></li>
+        <li class="header_button"><a href="https://creamsicle42.itch.io/">My Itch</a></li>
+        <li class="header_button"><a href="https://angeldown.thecomicseries.com/">My Comic</a></li>
+                <li class="header_button" style="float: right;"><a href="../feed.xml">RSS Feed</a></li>
+    </ul>
+        <div id="article_content" class="article_content">
+                <h1>Trenchbroom and Godot</h1>
+                <p>Earlier this week I decided to take another dive into Godot's 3D side.  I've been wanting to try my hand at building a "boomer shooter" for a long while, and I figured it would be a pretty simple place to start out.  I quickly found out that while Godot 4 brought many new capabilities under the hood, the user experience of level building remained as clunky as ever.  What I needed was a dedicated level building tool.  Enter <a href="https://www.youtube.com/watch?v=DMJ7i4nuMVA&t=719s">This Video</a> by fellow Godot dev Blargis.  In the video, he describes his workflow with the <a href="https://trenchbroom.github.io/">Trenchbroom</a> editor, and the Qodot addon for Godot, the combination of which looked just perfect for my needs.</p>
+                <h2>Quaking in my Boots</h2>
+                <p>Trenchbroom is at it's heart, a Quake level editor, although technically you can edit maps for Source Engine games just as fluently.  People familiar with Half Life or Counter Strike mapping will find it similar to the Hammer level editor used by the Source community.  Between the two of them I find Trenchbroom to be slightly more primitive, lacking in native support for things like Displacements and Decals.  Personally I prefer the more pared-down tool suite.</p>
+<h2>Qodot</h2>
+<p>Qodot is an addon for Godot that adds the ability to build out .map files into Godot friendly meshes and collision shapes.  Qodot can also build .fgd files used by the Trenchbroom editor to allow for Godot Nodes and Scenes to be placed in Trenchbroom directly without having to do any direct work in Godot.  Qodot has already been used in a few high profile Godot games, most notably Cruelty Squad.</p>
+<p>With the combination of Qodot and Trenchbroom, I was able to get some visually impressive results...</p>
+<img src="../media/TBGIDemo.png" alt="A room made out of flat shapes in a low-poly art style.  The room is illuminated by a rectangular skylight." style="display: block; width: 85%; margin-left: auto; margin-right: auto;">
+<img src="../media/TBTexDemo.png" alt="A room made out of flat shapes in a low-poly art style.  The room has slanted pillars on the wall and is iluminated by a grate in the ceiling." style="display: block; width: 85%; margin-left: auto; margin-right: auto;">
+<h3>Teething Issues</h3>
+<p>Despite it's great capability, Qodot has some major usability flaws.  The process of bridging the Godot project and Trenchbroom is highly convoluted, and there are several bugs concerning FGDs that make rebuilding maps a hassle.  If you know all the proper workarounds, then Qodot is a perfectly useable tool, but for a beginner it is almost impenetrable.  The limited information in the official documentations doesn't help in that regard.</p>
+<p>Speaking of which, almost all of the official documentation about Qodot is specifically targeted at the Godot 3.x version of the plugin.  Most of it is perfectly acceptable, but information about debugging and the setup process were severely lacking.  Because of this I was forced to go into the official Discord server, which is where I found...</p>
+<h2>func_godot</h2>
+<p>So as it turns out, Qodot development has actually been inactive for the past few months.  A lot of the developers appear to have moved over the the <a href="https://github.com/func-godot">func_godot</a> addon.  This addon does more or less the same things as Qdot, but in a more streamlined and user friendly way. </p>
+
+        </div>
+	<script>
+            let params = new URL(window.location.toLocaleString()).searchParams;
+            let article = params.get("article");
+            let article_content = document.getElementById("article_content");
+            let article_json = {}
+            fetch("articles/" + article + ".html")
+                .then((response) => response.text())
+                .then((text) => article_content.innerHTML = text);
+        </script>
+</body>
+</html>
